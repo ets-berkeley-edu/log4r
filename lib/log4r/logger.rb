@@ -146,6 +146,14 @@ module Log4r
       return true if self.object_id == other.object_id
     end
 
+    def <<(text)
+      info(text)
+    end
+
+    def write(text)
+      info(text)
+    end
+
     # <tk>
     def formatter
       stderr_outputter = nil
